@@ -18,8 +18,8 @@ const UserDet = () => {
     <div>
       
     <Navbar/>
-    <div className='container m-5'>
-    <div className="card m-5 " style={{width: "18rem"}} >
+    <div className='container m-5 '>
+    <div className="card m-5 mx-auto mt-5" style={{width: "18rem"}} >
   <img src="https://source.unsplash.com/random/300x200?sig=${Math.random()}" className="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">Name - {user.name}</h5>

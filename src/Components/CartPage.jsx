@@ -12,6 +12,12 @@ const CartPage = () => {
 
 
     const handleCartButton =() =>{
+if(cartItems.length === 0) {
+  alert("there are no item")
+  return
+}
+
+
         Navigate("/CheckOut")
     }
 
@@ -48,26 +54,39 @@ const CartPage = () => {
   };
 
   const handleSub = (item) => {
+
     let tempCart = [...cartItems];
+    
     const itemIndex = tempCart.findIndex((i) => i.title === item.title);
-    if (tempCart[itemIndex].count === 1) {
-      tempCart.splice(itemIndex, 1);
+    
+    if (tempCart[itemIndex].price === item.price) {
+    
+    tempCart.splice(itemIndex, 1);
+    
     } else {
-      tempCart[itemIndex].count -= 1;
+    
+    tempCart[itemIndex].price -= item.price;
+    
     }
+    
     setCartItem(tempCart);
-  };
+    
+    };
 
   return (
     <>
       <Navbar />
       <h1 className="display-1 text-center"> CART PAGE</h1>
       <div className="container text-center">
+
+
+        
         {cartItems.map((data, index) => (
           <div className="card" key={index}>
             <div className="card-body">
               <h4 className="card-title">{data.title}</h4>
               <p className="card-text">Price: {data.price}</p>
+              {/* <img src={data.img} /> */}
               <div className="d-flex justify-content-between align-items-center">
                 <button
                   className="btn btn-danger"
