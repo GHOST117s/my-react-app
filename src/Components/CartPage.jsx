@@ -6,7 +6,7 @@ import { Link,Navigate,Route,Routes,useNavigate } from 'react-router-dom'
 
 const CartPage = () => {
 
-  
+
 
 
 
@@ -110,7 +110,7 @@ if(cartItems.length === 0) {
           </div>
         ))}
       </div>
-      <div className="container text-center">
+      <div className="container text-center mt-4">
         <h4 className="text-center">Total: {total}</h4>
         <button className="btn btn-primary"  onClick={handleCartButton}>Checkout</button>
       </div>
