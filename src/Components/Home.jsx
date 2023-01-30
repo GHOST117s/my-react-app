@@ -7,8 +7,8 @@ import items from "../food-itmes";
 // import CartPage from "./CartPage";
 
 
-import logo from "../logo.JPG";
-import CartPage from "../Components/CartPage";
+// import logo from "../logo.JPG";
+// import CartPage from "../Components/CartPage";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 

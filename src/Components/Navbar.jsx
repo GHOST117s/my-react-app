@@ -23,7 +23,7 @@ const handleCartButton =() =>{
  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid ml-5">
   <img src={logo2} alt="" width="60" height="60"/>
-    <a className="navbar-brand" >FoodZone</a>
+    <Link className="navbar-brand" to="/" style={{fontSize:"25px"}} >FoodZone</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -34,19 +34,19 @@ const handleCartButton =() =>{
       </ul>
       
       <form className="d-flex">       
-      <li className="nav-item">
-          <Link className="nav-link ml-1 " aria-current="page" to="/"><span className="material-icons">
+      {/* <li className="nav-item">
+          <Link className="nav-link ml-1 " aria-current="page" to="/"><span className="material-icons" style={{fontSize:"30px"}}>
 home
 </span>
 </Link>
-        </li>
+        </li> */}
         <li className="nav-item">
-          <Link className="nav-link ml-2" to="/UserDet"><span className="material-icons">
+          <Link className="nav-link ml-2" to="/UserDet"><span className="material-icons" style={{fontSize:"30px"}}>
 account_circle
 </span></Link>
         </li>
         <li className="nav-item">
-          <button className='nav-link ml-2' to="/Login"  onClick={handleCartButton}><i className="material-icons md-dark"><span className="material-icons">
+          <button className='nav-link ml-2' to="/Login"  onClick={handleCartButton}><i className="material-icons md-dark"><span className="material-icons" style={{fontSize:"30px"}}>
 shopping_cart
 </span>
 </i></button>
@@ -56,7 +56,7 @@ shopping_cart
 
         
         <li className="nav-item">
-          <Link className='nav-link ml-2' to="/Login"><span className="material-icons">
+          <Link className='nav-link ml-2' to="/Login"><span className="material-icons" style={{fontSize:"30px"}}>
 login
 </span></Link>
         </li>

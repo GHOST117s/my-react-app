@@ -6,6 +6,8 @@ import { Link,Navigate,Route,Routes,useNavigate } from 'react-router-dom'
 
 const CartPage = () => {
 
+  
+
 
 
     const Navigate = useNavigate()
@@ -13,7 +15,7 @@ const CartPage = () => {
 
     const handleCartButton =() =>{
 if(cartItems.length === 0) {
-  alert("there are no item")
+  alert("There are no Items in Ur Cart")
   return
 }
 
